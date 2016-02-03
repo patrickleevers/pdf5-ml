@@ -200,15 +200,15 @@ URL : http://www.antennahouse.co.jp/
     </xsl:variable>
     
     <xsl:variable name="stMes102">
-        <xsl:text>[altstyledef 102W] Alternate style definiton file %file does not found. Stylesheet use %default as style definition file.</xsl:text>
+        <xsl:text>[altstyledef 102W] Alternate style definition file %file does not found. Stylesheet use %default as style definition file.</xsl:text>
     </xsl:variable>
     
     <xsl:variable name="stMes103">
-        <xsl:text>[altstyledef 103W] Alternate style definiton file %file does not found. Stylesheet use %default as alternate style definition file.</xsl:text>
+        <xsl:text>[altstyledef 103W] Alternate style definition file %file does not found. Stylesheet use %default as alternate style definition file.</xsl:text>
     </xsl:variable>
     
     <xsl:variable name="stMes104">
-        <xsl:text>[styledef 104F] Style definiton file %file does not found.</xsl:text>
+        <xsl:text>[styledef 104F] Style definition file %file does not found.</xsl:text>
     </xsl:variable>
 
     <xsl:variable name="stMes105">
@@ -438,6 +438,10 @@ URL : http://www.antennahouse.co.jp/
 
     <xsl:variable name="stMes1500">
         <xsl:text>[parameter 1500F] Paper size parameter is invalid. Parameter=%param Supported value=%sptval.</xsl:text>
+    </xsl:variable>
+
+    <xsl:variable name="stMes1600">
+        <xsl:text>[hasAutoEquationNumber 1600F] $prmEquationNumber does not have @class value 'equation-d/equation-number'. @class='%class'.</xsl:text>
     </xsl:variable>
     
 

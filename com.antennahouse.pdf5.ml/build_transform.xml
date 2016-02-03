@@ -150,9 +150,18 @@
                 if="output.type"/>
             <param name="PRM_EXCLUDE_COVER_FROM_COUNTING_PAGE" expression="${exclude.cover.from.counting.page}"
                 if="exclude.cover.from.counting.page"/>
+            <param name="PRM_NUMBER_EQUATION_BLOCK_UNCONDITIONALLY" expression="${number.equation.block.unconditionally}"
+                if="number.equation.block.unconditionally"/>
+            <param name="PRM_EXCLUDE_AUTO_NUMBERING_FROM_EQUATION_FIGURE" expression="${exclude.auto.numbering.from.equation.figure}"
+                if="exclude.auto.numbering.from.equation.figure"/>
+            <param name="PRM_ASSUME_EQUATION_NUMBER_AS_AUTO" expression="${assume.equation.number.as.auto}"
+                if="assume.equation.number.as.auto"/>
             <param name="PRM_USE_I18N_INDEX_LIB" expression="${use.i18n.index.lib}"
                 if="use.i18n.index.lib"/>
             <param name="PRM_MAP_DIR_URL" expression="${user.input.dir.url}" if="user.input.dir.url"/>
+            <param name="PRM_OUTPUT_DIR_URL" expression="${output.dir.url}" if="output.dir.url"/>
+            <param name="PRM_INPUT_MAP_NAME" expression="${dita.map.filename.root}" if="dita.map.filename.root"/>
+            <param name="PRM_DEBUG_INDEX_SORT_RESULT" expression="${debug.index.sort.result}" if="debug.index.sort.result"/>
             <param name="PRM_OT_VERSION" expression="${otversion}" if="otversion"/>
             <sysproperty key="com.innodata.i18n.home" value="${i18n.home}"/>
             <sysproperty key="use.i18n.index.lib" value="${use.i18n.index.lib}"/>
@@ -201,8 +210,14 @@
             <arg line="'PRM_OUTPUT_CROP_REGION=${output.crop.region}'"/>
             <arg line="'PRM_OUTPUT_TYPE=${output.type}'"/>
             <arg line="'PRM_EXCLUDE_COVER_FROM_COUNTING_PAGE=${exclude.cover.from.counting.page}'"/>
+            <arg line="'PRM_NUMBER_EQUATION_BLOCK_UNCONDITIONALLY=${number.equation.block.unconditionally}'"/>
+            <arg line="'PRM_EXCLUDE_AUTO_NUMBERING_FROM_EQUATION_FIGURE=${exclude.auto.numbering.from.equation.figure}'"/>
+            <arg line="'PRM_ASSUME_EQUATION_NUMBER_AS_AUTO=${assume.equation.number.as.auto}'"/>
             <arg line='"PRM_USE_I18N_INDEX_LIB=${use.i18n.index.lib}"'/>
             <arg line='"PRM_MAP_DIR_URL=${user.input.dir.url}"'/>
+            <arg line='"PRM_OUTPUT_DIR_URL=${output.dir.url}"'/>
+            <arg line='"PRM_INPUT_MAP_NAME=${dita.map.filename.root}"'/>
+            <arg line='"PRM_DEBUG_INDEX_SORT_RESULT=${debug.index.sort.result}"'/>
             <arg line='"PRM_OT_VERSION=${otversion}"'/>
             <sysproperty key="com.innodata.i18n.home" value="${i18n.home}"/>
             <sysproperty key="use.i18n.index.lib" value="${use.i18n.index.lib}"/>

@@ -260,4 +260,35 @@ E-mail : info@antennahouse.com
     <xsl:variable name="pExcludeCoverFromCountingPage" as="xs:boolean" select="$PRM_EXCLUDE_COVER_FROM_COUNTING_PAGE eq $cYes"/>
     <xsl:variable name="pIncludeCoverIntoPageCounting" as="xs:boolean" select="not($pExcludeCoverFromCountingPage)"/>
     
+    <!-- Number <equation-block> unconditionally
+         <equation-number> with effective number will be honored
+     -->
+    <xsl:param name="PRM_NUMBER_EQUATION_BLOCK_UNCONDITIONALLY" as="xs:string" required="no" select="$cNo"/>
+    <xsl:variable name="pNumberEquationBlockUnconditionally" as="xs:boolean" select="$PRM_NUMBER_EQUATION_BLOCK_UNCONDITIONALLY eq $cYes"/>
+    
+    <!-- Exclude <equation-block> in <equation-figure> in unconditionally numbering mode
+     -->
+    <xsl:param name="PRM_EXCLUDE_AUTO_NUMBERING_FROM_EQUATION_FIGURE" as="xs:string" required="no" select="$cYes"/>
+    <xsl:variable name="pExcludeAutoNumberingFromEquationFigure" as="xs:boolean" select="$PRM_EXCLUDE_AUTO_NUMBERING_FROM_EQUATION_FIGURE eq $cYes"/>
+
+    <!-- Assume all <equation-number> as auto
+         This parameter ignores manual numbering of <equation-number>
+         This function is not in OASIS standard. But useful for making books. 
+     -->
+    <xsl:param name="PRM_ASSUME_EQUATION_NUMBER_AS_AUTO" as="xs:string" required="no" select="$cNo"/>
+    <xsl:variable name="pAssumeEquationNumberAsAuto" as="xs:boolean" select="$PRM_ASSUME_EQUATION_NUMBER_AS_AUTO eq $cYes"/>
+    
+    <!-- Output directory URL
+         2016-01-11 t.makita
+     -->
+    <xsl:param name="PRM_OUTPUT_DIR_URL" required="yes" as="xs:string"/>
+    <xsl:variable name="pOutputDirUrl" as="xs:string" select="$PRM_OUTPUT_DIR_URL"/>
+
+    <!-- DITA input file name (wo directory & extension)
+         2016-01-11 t.makita
+     -->
+    <xsl:param name="PRM_INPUT_MAP_NAME" required="yes" as="xs:string"/>
+    <xsl:variable name="pInputMapName" as="xs:string" select="$PRM_INPUT_MAP_NAME"/>
+    
+
 </xsl:stylesheet>
